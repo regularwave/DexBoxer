@@ -271,6 +271,19 @@ function buildBoxes() {
     return boxes;
 }
 
+function getGenderText(pokemon) {
+    if (pokemon.Name === "Alcremie") return "Female";
+
+    if (pokemon.Gender === "-f") return "Female";
+
+    if (!pokemon.Gender || pokemon.Gender === "") {
+        const hasFemale = fullDataset.some(p => p.NatDex === pokemon.NatDex && p['Form Name'] === pokemon['Form Name'] && p.Gender === "-f");
+        return hasFemale ? "Male" : "Any";
+    }
+
+    return "Any";
+}
+
 function renderBoxes() {
     els.container.innerHTML = '';
 
@@ -359,7 +372,8 @@ function renderBoxes() {
 
                 const gameIdTxt = currentConfig.game === 'NatDex' ? `NatDex #${p.NatDex}` : `ID: ${p[currentConfig.game]}`;
                 const formTxt = p['Form Name'] ? ` - ${p['Form Name']}` : '';
-                const genderTxt = p.Gender ? (p.Gender === '-f' ? ' (Female)' : ` (${p.Gender})`) : '';
+                const genderDisplay = getGenderText(p);
+                const genderTxt = genderDisplay === 'Any' ? '' : ` (${genderDisplay})`;
                 slot.title = `${gameIdTxt} ${p.Name}${formTxt}${genderTxt}\nLeft-click: Track\nRight-click: Details`;
 
                 const img = document.createElement('img');
@@ -474,7 +488,7 @@ function showModal(pokemon, keyword, slotElement) {
     document.getElementById('modal-natdex').textContent = (pokemon.NatDex || '???').padStart(4, '0');
     document.getElementById('modal-gameid').textContent = currentConfig.game === 'NatDex' ? pokemon.NatDex : pokemon[currentConfig.game];
     document.getElementById('modal-form').textContent = pokemon['Form Name'] || 'Base Form';
-    document.getElementById('modal-gender').textContent = pokemon.Gender === '-f' ? 'Female Variant' : (pokemon.Gender ? pokemon.Gender : 'Default');
+    document.getElementById('modal-gender').textContent = getGenderText(pokemon);
 
     const cleanId = parseInt(pokemon.NatDex);
     const spriteEl = document.getElementById('modal-sprite');
