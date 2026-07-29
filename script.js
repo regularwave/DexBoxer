@@ -47,16 +47,16 @@ const els = {
 };
 
 const fallbackData = [
-    { "NatDex": "1", "Name": "Bulbasaur", "Keyword": "bulbasaur", "Order": "1", "HOME": "1", "SV": "167" },
-    { "NatDex": "2", "Name": "Ivysaur", "Keyword": "ivysaur", "Order": "2", "HOME": "2", "SV": "168" },
-    { "NatDex": "3", "Name": "Venusaur", "Keyword": "venusaur", "Order": "3", "HOME": "3", "SV": "169" },
-    { "NatDex": "4", "Name": "Charmander", "Keyword": "charmander", "Order": "4", "HOME": "4", "SV": "164" },
-    { "NatDex": "4", "Name": "Charmander", "Keyword": "charmander-shiny", "Form Name": "Shiny", "Order": "5", "HOME": "4", "SV": "164" },
-    { "NatDex": "5", "Name": "Charmeleon", "Keyword": "charmeleon", "Order": "6", "HOME": "5", "SV": "165" },
-    { "NatDex": "6", "Name": "Charizard", "Keyword": "charizard", "Order": "7", "HOME": "6", "SV": "166" },
-    { "NatDex": "25", "Name": "Pikachu", "Keyword": "pikachu", "Order": "35", "HOME": "25", "SV": "74" },
-    { "NatDex": "25", "Name": "Pikachu", "Keyword": "pikachu-f", "Gender": "-f", "Order": "36", "HOME": "25", "SV": "74" },
-    { "NatDex": "1000", "Name": "Gholdengo", "Keyword": "gholdengo", "Order": "1200", "HOME": "1000", "SV": "392" }
+    { "NatDex": "1", "Name": "Bulbasaur", "Keyword": "bulbasaur", "Order": "1", "HOME": "1", "SV": "167", "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" },
+    { "NatDex": "2", "Name": "Ivysaur", "Keyword": "ivysaur", "Order": "2", "HOME": "2", "SV": "168", "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png" },
+    { "NatDex": "3", "Name": "Venusaur", "Keyword": "venusaur", "Order": "3", "HOME": "3", "SV": "169", "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png" },
+    { "NatDex": "4", "Name": "Charmander", "Keyword": "charmander", "Order": "4", "HOME": "4", "SV": "164", "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" },
+    { "NatDex": "4", "Name": "Charmander", "Keyword": "charmander-shiny", "Form Name": "Shiny", "Order": "5", "HOME": "4", "SV": "164", "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/4.png" },
+    { "NatDex": "5", "Name": "Charmeleon", "Keyword": "charmeleon", "Order": "6", "HOME": "5", "SV": "165", "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png" },
+    { "NatDex": "6", "Name": "Charizard", "Keyword": "charizard", "Order": "7", "HOME": "6", "SV": "166", "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png" },
+    { "NatDex": "25", "Name": "Pikachu", "Keyword": "pikachu", "Order": "35", "HOME": "25", "SV": "74", "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" },
+    { "NatDex": "25", "Name": "Pikachu", "Keyword": "pikachu-f", "Gender": "-f", "Order": "36", "HOME": "25", "SV": "74", "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/female/25.png" },
+    { "NatDex": "1000", "Name": "Gholdengo", "Keyword": "gholdengo", "Order": "1200", "HOME": "1000", "SV": "392", "Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1000.png" }
 ];
 
 async function init() {
@@ -380,8 +380,13 @@ function renderBoxes() {
                 img.className = 'pokemon-sprite';
                 img.alt = p.Name;
                 img.loading = 'lazy';
-                const cleanId = parseInt(p.NatDex);
-                img.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${cleanId}.png`;
+
+                if (p.Sprite) {
+                    img.src = p.Sprite;
+                } else {
+                    const cleanId = parseInt(p.NatDex);
+                    img.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${cleanId}.png`;
+                }
 
                 img.onerror = function () {
                     this.src = `https://placehold.co/64x64/e2e8f0/64748b?text=${String(p.Name).substring(0, 3)}`;
@@ -490,9 +495,15 @@ function showModal(pokemon, keyword, slotElement) {
     document.getElementById('modal-form').textContent = pokemon['Form Name'] || 'Base Form';
     document.getElementById('modal-gender').textContent = getGenderText(pokemon);
 
-    const cleanId = parseInt(pokemon.NatDex);
     const spriteEl = document.getElementById('modal-sprite');
-    spriteEl.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${cleanId}.png`;
+
+    if (pokemon.Sprite) {
+        spriteEl.src = pokemon.Sprite;
+    } else {
+        const cleanId = parseInt(pokemon.NatDex);
+        spriteEl.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${cleanId}.png`;
+    }
+
     spriteEl.onerror = function () {
         this.src = `https://placehold.co/128x128/e2e8f0/64748b?text=${String(pokemon.Name).substring(0, 3)}`;
     };
