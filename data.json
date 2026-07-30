@@ -21579,7 +21579,7 @@
 		"BDSP": "",
 		"PLA": "",
 		"SV": "P199",
-		"PLZA": "",
+		"PLZA": "H103",
 		"Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/849.png",
 		"ShowdownSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/849.gif"
 	},
@@ -21598,7 +21598,7 @@
 		"BDSP": "",
 		"PLA": "",
 		"SV": "P199",
-		"PLZA": "",
+		"PLZA": "H103",
 		"Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10184.png",
 		"ShowdownSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10184.gif"
 	},
