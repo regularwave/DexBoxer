@@ -12630,7 +12630,7 @@
 		"BDSP": "479",
 		"PLA": "194",
 		"SV": "P310",
-		"PLZA": "",
+		"PLZA": "H022",
 		"Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/479.png",
 		"ShowdownSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/479.gif"
 	},
@@ -12649,7 +12649,7 @@
 		"BDSP": "479",
 		"PLA": "194",
 		"SV": "P310",
-		"PLZA": "",
+		"PLZA": "H022",
 		"Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10008.png",
 		"ShowdownSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10008.gif"
 	},
@@ -12668,7 +12668,7 @@
 		"BDSP": "479",
 		"PLA": "194",
 		"SV": "P310",
-		"PLZA": "",
+		"PLZA": "H022",
 		"Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10009.png",
 		"ShowdownSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10009.gif"
 	},
@@ -12687,7 +12687,7 @@
 		"BDSP": "479",
 		"PLA": "194",
 		"SV": "P310",
-		"PLZA": "",
+		"PLZA": "H022",
 		"Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10010.png",
 		"ShowdownSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10010.gif"
 	},
@@ -12706,7 +12706,7 @@
 		"BDSP": "479",
 		"PLA": "194",
 		"SV": "P310",
-		"PLZA": "",
+		"PLZA": "H022",
 		"Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10011.png",
 		"ShowdownSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10011.gif"
 	},
@@ -12725,7 +12725,7 @@
 		"BDSP": "479",
 		"PLA": "194",
 		"SV": "P310",
-		"PLZA": "",
+		"PLZA": "H022",
 		"Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10012.png",
 		"ShowdownSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10012.gif"
 	},
@@ -16392,7 +16392,7 @@
 		"BDSP": "",
 		"PLA": "",
 		"SV": "",
-		"PLZA": "",
+		"PLZA": "H118",
 		"Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/647.png",
 		"ShowdownSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/647.gif"
 	},
@@ -16411,7 +16411,7 @@
 		"BDSP": "",
 		"PLA": "",
 		"SV": "",
-		"PLZA": "",
+		"PLZA": "H118",
 		"Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10024.png",
 		"ShowdownSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10024.gif"
 	},
@@ -16430,7 +16430,7 @@
 		"BDSP": "",
 		"PLA": "",
 		"SV": "",
-		"PLZA": "",
+		"PLZA": "H119",
 		"Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/648.png",
 		"ShowdownSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/648.gif"
 	},
@@ -23327,7 +23327,7 @@
 		"BDSP": "",
 		"PLA": "",
 		"SV": "P241",
-		"PLZA": "",
+		"PLZA": "H052",
 		"Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/876.png",
 		"ShowdownSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/876.gif"
 	},
@@ -23346,7 +23346,7 @@
 		"BDSP": "",
 		"PLA": "",
 		"SV": "P241",
-		"PLZA": "",
+		"PLZA": "H052",
 		"Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/female/876.png",
 		"ShowdownSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/female/876.gif"
 	},
@@ -24543,7 +24543,7 @@
 		"BDSP": "",
 		"PLA": "",
 		"SV": "P113",
-		"PLZA": "",
+		"PLZA": "H086",
 		"Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/931.png",
 		"ShowdownSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/931.gif"
 	},
@@ -24562,7 +24562,7 @@
 		"BDSP": "",
 		"PLA": "",
 		"SV": "P113",
-		"PLZA": "",
+		"PLZA": "H086",
 		"Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10260.png",
 		"ShowdownSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10260.gif"
 	},
@@ -24581,7 +24581,7 @@
 		"BDSP": "",
 		"PLA": "",
 		"SV": "P113",
-		"PLZA": "",
+		"PLZA": "H086",
 		"Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10261.png",
 		"ShowdownSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10261.gif"
 	},
@@ -24600,7 +24600,7 @@
 		"BDSP": "",
 		"PLA": "",
 		"SV": "P113",
-		"PLZA": "",
+		"PLZA": "H086",
 		"Sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10262.png",
 		"ShowdownSprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/10262.gif"
 	},
